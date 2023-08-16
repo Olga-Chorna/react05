@@ -1,0 +1,60 @@
+.container{
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  background: #d9edea;
+  border: 2px solid #fff;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  
+}
+.form {
+ display: flex;
+ flex-direction: column;
+ max-width: 30rem;
+ margin: 0 auto;
+ padding: 1.2rem;
+}
+
+.input {
+  margin-top: 0.9375rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.input:focus {
+  border-bottom: 2px solid rgb(112, 118, 120);
+}
+
+.select {
+  margin-top: 0.9375rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.submit {
+  color: #fff;
+  background: #262626;
+}
+
+.submit:hover {
+  background: #4e5455;
+} 
+
+.lower {
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  width: 92%;
+}
+
+.red{
+  background-color: rgb(226, 55, 55);
+}
