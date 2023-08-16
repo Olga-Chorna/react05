@@ -15,10 +15,6 @@ class SingnInForm extends Component {
     super(props);
     this.state={
       ...initialState
-      // email:'',
-      // password:'',
-      // emailIsValid: true,
-      // passwordIsValid: true
     }
   }
 
@@ -28,30 +24,10 @@ class SingnInForm extends Component {
     this.setState(
       {
         ...initialState
-        // email:'',
-        // password:'',
-        // emailIsValid: true,
-        // passwordIsValid: true
       }
     )
     console.log(event);
   }
-
-  // handlerEmail = ({ target: { value }}) => {
-  //   const isInvalid = value.includes(' ');
-  //   this.setState({
-  //     email: value,
-  //     emailIsValid: !isInvalid
-  //   })
-  // }
-
-  // handlerPassword = ({ target: { value }}) => {
-  //   const isInvalid = value.includes(' ');
-  //   this.setState({
-  //     password: value,
-  //     passwordIsValid: !isInvalid
-  //   })
-  // }
 
   handlerInput = ({ target: { value, name }}) => {
     const isInvalid = value.includes(' ');
@@ -68,22 +44,6 @@ class SingnInForm extends Component {
     })
   }
 
-  // handlerInput = ({ target }) => {
-  //   function input() {
-  //     return this.setState({
-  //       [target.name]: target.value,
-  //       [`${target.name}IsValid`]: !target.value.includes(' ')
-  //     })
-  //   } 
-
-  //   function select(){
-  //     return this.setState({
-  //       [target.name]: target.value,
-  //     })
-  //   } 
-
-  //   target.type === 'select' ? select() : input();
-  // }
 
   lowerCase = () => {
     this.setState(
@@ -101,9 +61,7 @@ class SingnInForm extends Component {
       <div className={styles.container}>
         <form className={styles.form} onSubmit={this.handlerForm}> 
           <input 
-            value={this.state.email}
-            //Призводеть до довання непотрібного  класу .false
-            // className={`${styles.input} ${!this.state.emailIsValid && styles.red}`}  
+            value={this.state.email} 
             className={styleEmail}
             type="text" 
             name="email"
@@ -113,15 +71,12 @@ class SingnInForm extends Component {
 
           <input 
             value={this.state.password}
-            // className={`${styles.input} ${!this.state.passwordIsValid && styles.red}`} 
             className={stylePassword}
             type="password" 
             name="password"
             onChange={this.handlerInput}
             placeholder='password'
           />
-
-          {/* https://zakon.rada.gov.ua/laws/show/z0957-14#Text */}
           <label for='regions' className={classNames(styles.input, styles.label)}>
             Оберіть область України:
           </label>
